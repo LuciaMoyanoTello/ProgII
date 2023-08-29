@@ -1,4 +1,5 @@
-﻿using CarpinteriaApp.Dominio;
+﻿using CarpinteriaApp.Datos;
+using CarpinteriaApp.Dominio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,12 +15,15 @@ namespace CarpinteriaApp.Formularios
 {
     public partial class FrmNuevoPresupuesto : Form
     {
+        //CLASE DBHELPER
+        DBHelper gestor = null;
         //CUANDO PONGA ACEPTAR CREA UN NUEVO PRESUPUESTO
         Presupuesto nuevo;
         public FrmNuevoPresupuesto()
         {
             InitializeComponent();
             nuevo = new Presupuesto();
+            gestor = new DBHelper();
         }
 
         private void FrmNuevoPresupuesto_Load(object sender, EventArgs e)
@@ -32,64 +36,18 @@ namespace CarpinteriaApp.Formularios
             txtCantidad.Text = "1";
 
             //MÉTODOS
-            proximoPresupuesto();
+            lblPresupuestoNro.Text = lblPresupuestoNro.Text + " " + gestor.proximoPresupuesto().ToString();
             cargarProductos();
         }
 
         private void cargarProductos()
         {
-            //CONEXIÓN Y COMANDO
-            SqlConnection conexion = new SqlConnection();
-            conexion.ConnectionString = @"Data Source=DESKTOP-GE4ANJO\SQLEXPRESS;Initial Catalog=Carpinteria_2023;Integrated Security=True";
-            conexion.Open();
-            SqlCommand comando = new SqlCommand();
-            comando.Connection = conexion;
-            comando.CommandType = CommandType.StoredProcedure;
-
-            //CONSULTAR PRODUCTOS SE HACE CON TABLA
-            comando.CommandText = "SP_CONSULTAR_PRODUCTOS";
-            DataTable tabla = new DataTable();
-            //PARA CARGAR LA TABLA
-            tabla.Load(comando.ExecuteReader());
-
-            //CIERRO CONEXIÓN
-            conexion.Close();
-
             //CARGAR COMBO
+            DataTable tabla = gestor.Consultar("SP_CONSULTAR_PRODUCTOS");
             cboProducto.DataSource = tabla;
             cboProducto.ValueMember = tabla.Columns[0].ColumnName;
             cboProducto.DisplayMember = tabla.Columns[1].ColumnName;
         }
-
-        private void proximoPresupuesto()
-        {
-            //CONEXIÓN
-            SqlConnection conexion = new SqlConnection();
-            conexion.ConnectionString = @"Data Source=DESKTOP-GE4ANJO\SQLEXPRESS;Initial Catalog=Carpinteria_2023;Integrated Security=True";
-            conexion.Open();
-
-            //COMANDO
-            SqlCommand comando = new SqlCommand();
-            comando.Connection = conexion;
-            comando.CommandType = CommandType.StoredProcedure; //PROCEDIMIENTO ALMACENADO
-
-            //PARA AGREGAR EL NÚMERO DEL PRESUPUESTO
-            comando.CommandText = "SP_PROXIMO_ID"; //NOMBRE PROCEDIMIENTO EN LA BD
-            SqlParameter parametro = new SqlParameter();
-            parametro.ParameterName = "@next"; //NOMBRE DEL PARÁMETRO EN LA BD
-            parametro.SqlDbType = SqlDbType.Int; //PARÁMETRO TIPO INT
-            parametro.Direction = ParameterDirection.Output; //PARÁMETRO DE SALIDA
-            comando.Parameters.Add(parametro); //PARA AGREGAR EL PARÁMETRO DE SALIDA 
-            //PARA AGREGAR PARÁMETRO DE ENTRADA ES CON ADDWITHVALUE
-            comando.ExecuteNonQuery(); //EJECUTO EL COMANDO
-
-            //CIERRO CONEXIÓN
-            conexion.Close();
-
-            //AGREGO A LA LABEL
-            lblPresupuestoNro.Text = lblPresupuestoNro.Text + " " + parametro.Value.ToString();
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             //VERIFICAR SI HAY PRODUCTO Y CANTIDAD
@@ -173,6 +131,50 @@ namespace CarpinteriaApp.Formularios
                 //SE VUELVE A ACTUALIZAR EL PRECIO
                 calcularTotales();
             }
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            //VALIDAR
+            if(string.IsNullOrEmpty(txtCliente.Text))
+            {
+                MessageBox.Show("Debe ingresar un cliente...", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if(dgvDetalles.Rows.Count == 0)
+            {
+                MessageBox.Show("Debe ingresar al menos un detalle...", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            //CONFIRMAR O GRABAR
+            GrabarPresupuesto();
+        }
+
+        private void GrabarPresupuesto()
+        {
+            //presupuesto
+            nuevo.Fecha = Convert.ToDateTime(txtFecha.Text);
+            nuevo.Cliente = txtCliente.Text;
+            nuevo.Descuento = Convert.ToDouble(txtDescuento.Text);
+
+            if (gestor.ConfirmarPresupuesto(nuevo))//pasar por parámetro el presupuesto
+            {
+                MessageBox.Show("Se registró con éxito el presupuesto...", "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                this.Dispose(); //CIERRA Y VUELVE AL FORM PRINCIPAL
+                return;
+            }
+            else
+            {
+                MessageBox.Show("No se pudo registrar el presupuesto...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

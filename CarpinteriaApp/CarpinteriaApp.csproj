@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\DBHelper.cs" />
     <Compile Include="Dominio\DetallePresupuesto.cs" />
     <Compile Include="Dominio\Presupuesto.cs" />
     <Compile Include="Dominio\Producto.cs" />
@@ -91,8 +92,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Datos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
