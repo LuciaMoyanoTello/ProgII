@@ -1,0 +1,22 @@
+C:\Users\lucia\OneDrive\Documentos\2 año\progra 2 (no profe)\CarpinteriaApp\bin\Debug\CarpinteriaApp.exe.config
+C:\Users\lucia\OneDrive\Documentos\2 año\progra 2 (no profe)\CarpinteriaApp\bin\Debug\CarpinteriaApp.exe
+C:\Users\lucia\OneDrive\Documentos\2 año\progra 2 (no profe)\CarpinteriaApp\bin\Debug\CarpinteriaApp.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\progra 2 (no profe)\CarpinteriaApp\obj\Debug\CarpinteriaApp.csproj.AssemblyReference.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\progra 2 (no profe)\CarpinteriaApp\obj\Debug\CarpinteriaApp.Formularios.FrmNuevoPresupuesto.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\progra 2 (no profe)\CarpinteriaApp\obj\Debug\CarpinteriaApp.FrmPrincipal.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\progra 2 (no profe)\CarpinteriaApp\obj\Debug\CarpinteriaApp.Properties.Resources.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\progra 2 (no profe)\CarpinteriaApp\obj\Debug\CarpinteriaApp.csproj.GenerateResource.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\progra 2 (no profe)\CarpinteriaApp\obj\Debug\CarpinteriaApp.csproj.CoreCompileInputs.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\progra 2 (no profe)\CarpinteriaApp\obj\Debug\CarpinteriaApp.exe
+C:\Users\lucia\OneDrive\Documentos\2 año\progra 2 (no profe)\CarpinteriaApp\obj\Debug\CarpinteriaApp.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\bin\Debug\CarpinteriaApp.exe.config
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\bin\Debug\CarpinteriaApp.exe
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\bin\Debug\CarpinteriaApp.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\obj\Debug\CarpinteriaApp.csproj.AssemblyReference.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\obj\Debug\CarpinteriaApp.Formularios.FrmNuevoPresupuesto.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\obj\Debug\CarpinteriaApp.FrmPrincipal.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\obj\Debug\CarpinteriaApp.Properties.Resources.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\obj\Debug\CarpinteriaApp.csproj.GenerateResource.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\obj\Debug\CarpinteriaApp.csproj.CoreCompileInputs.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\obj\Debug\CarpinteriaApp.exe
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\obj\Debug\CarpinteriaApp.pdb
