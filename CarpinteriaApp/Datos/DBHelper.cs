@@ -137,5 +137,27 @@ namespace CarpinteriaApp.Datos
 
             return resultado;
         }
+        //PARA EL FORM CONSULTAR PRESUPUESTOS
+        public DataTable Consultar(string nombreSP,List<Parametro> lstparametros)
+        {
+            conexion.Open();
+
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.CommandText = nombreSP;
+
+            //SP CON PARÁMETROS
+            comando.Parameters.Clear();
+            foreach(Parametro p in lstparametros)
+            {
+                comando.Parameters.AddWithValue(p.Nombre, p.Valor);
+            }
+
+            DataTable tabla = new DataTable();
+            tabla.Load(comando.ExecuteReader());
+            conexion.Close();
+            return tabla;
+        }
     }
 }

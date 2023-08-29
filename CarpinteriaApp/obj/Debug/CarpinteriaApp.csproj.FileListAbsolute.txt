@@ -20,3 +20,4 @@ C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\obj\Debug\Carpin
 C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\obj\Debug\CarpinteriaApp.csproj.CoreCompileInputs.cache
 C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\obj\Debug\CarpinteriaApp.exe
 C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\obj\Debug\CarpinteriaApp.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp\obj\Debug\CarpinteriaApp.Formularios.FrmConsultarPresupuestos.resources

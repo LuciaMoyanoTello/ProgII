@@ -40,16 +40,30 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.ColPresupuestoNro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAcciones = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPresupuestos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPresupuestos
             // 
+            this.dgvPresupuestos.AllowUserToAddRows = false;
+            this.dgvPresupuestos.AllowUserToDeleteRows = false;
             this.dgvPresupuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPresupuestos.Location = new System.Drawing.Point(27, 237);
+            this.dgvPresupuestos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColPresupuestoNro,
+            this.ColFecha,
+            this.ColCliente,
+            this.ColTotal,
+            this.ColAcciones});
+            this.dgvPresupuestos.Location = new System.Drawing.Point(55, 234);
             this.dgvPresupuestos.Name = "dgvPresupuestos";
-            this.dgvPresupuestos.Size = new System.Drawing.Size(742, 150);
+            this.dgvPresupuestos.ReadOnly = true;
+            this.dgvPresupuestos.Size = new System.Drawing.Size(694, 150);
             this.dgvPresupuestos.TabIndex = 0;
             // 
             // btnConsultar
@@ -62,6 +76,7 @@
             this.btnConsultar.TabIndex = 1;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // groupBox1
             // 
@@ -162,6 +177,40 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             // 
+            // ColPresupuestoNro
+            // 
+            this.ColPresupuestoNro.HeaderText = "PresupuestoNro";
+            this.ColPresupuestoNro.Name = "ColPresupuestoNro";
+            this.ColPresupuestoNro.ReadOnly = true;
+            // 
+            // ColFecha
+            // 
+            this.ColFecha.HeaderText = "Fecha";
+            this.ColFecha.Name = "ColFecha";
+            this.ColFecha.ReadOnly = true;
+            // 
+            // ColCliente
+            // 
+            this.ColCliente.HeaderText = "Cliente";
+            this.ColCliente.Name = "ColCliente";
+            this.ColCliente.ReadOnly = true;
+            this.ColCliente.Width = 200;
+            // 
+            // ColTotal
+            // 
+            this.ColTotal.HeaderText = "Total";
+            this.ColTotal.Name = "ColTotal";
+            this.ColTotal.ReadOnly = true;
+            this.ColTotal.Width = 150;
+            // 
+            // ColAcciones
+            // 
+            this.ColAcciones.HeaderText = "Acciones";
+            this.ColAcciones.Name = "ColAcciones";
+            this.ColAcciones.ReadOnly = true;
+            this.ColAcciones.Text = "Ver Detalle";
+            this.ColAcciones.UseColumnTextForButtonValue = true;
+            // 
             // FrmConsultarPresupuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,6 +223,7 @@
             this.Controls.Add(this.dgvPresupuestos);
             this.Name = "FrmConsultarPresupuestos";
             this.Text = "FrmConsultarPresupuestos";
+            this.Load += new System.EventHandler(this.FrmConsultarPresupuestos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPresupuestos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -195,5 +245,10 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPresupuestoNro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTotal;
+        private System.Windows.Forms.DataGridViewButtonColumn ColAcciones;
     }
 }

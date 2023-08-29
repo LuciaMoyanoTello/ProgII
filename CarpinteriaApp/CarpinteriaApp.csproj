@@ -47,9 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\DBHelper.cs" />
+    <Compile Include="Datos\Parametro.cs" />
     <Compile Include="Dominio\DetallePresupuesto.cs" />
     <Compile Include="Dominio\Presupuesto.cs" />
     <Compile Include="Dominio\Producto.cs" />
+    <Compile Include="Formularios\FrmConsultarPresupuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmConsultarPresupuestos.Designer.cs">
+      <DependentUpon>FrmConsultarPresupuestos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmNuevoPresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +71,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\FrmConsultarPresupuestos.resx">
+      <DependentUpon>FrmConsultarPresupuestos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmNuevoPresupuesto.resx">
       <DependentUpon>FrmNuevoPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
