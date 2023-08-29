@@ -1,0 +1,10 @@
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\proyectoCarrera\bin\Debug\proyectoCarrera.exe.config
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\proyectoCarrera\bin\Debug\proyectoCarrera.exe
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\proyectoCarrera\bin\Debug\proyectoCarrera.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\proyectoCarrera\obj\Debug\proyectoCarrera.csproj.AssemblyReference.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\proyectoCarrera\obj\Debug\proyectoCarrera.FrmNuevaCarrera.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\proyectoCarrera\obj\Debug\proyectoCarrera.Properties.Resources.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\proyectoCarrera\obj\Debug\proyectoCarrera.csproj.GenerateResource.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\proyectoCarrera\obj\Debug\proyectoCarrera.csproj.CoreCompileInputs.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\proyectoCarrera\obj\Debug\proyectoCarrera.exe
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\proyectoCarrera\obj\Debug\proyectoCarrera.pdb
