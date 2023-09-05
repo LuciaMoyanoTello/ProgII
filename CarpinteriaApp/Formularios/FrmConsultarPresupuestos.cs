@@ -45,5 +45,25 @@ namespace CarpinteriaApp.Formularios
                                                         fila["total"].ToString()});
             }
         }
+
+        private void dgvPresupuestos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvPresupuestos.CurrentCell.ColumnIndex == 4)
+            {
+                //int nro = int.Parse(dgvPresupuestos.CurrentRow.Cells["ColNro"].Value.ToString());
+                int nro = Convert.ToInt32(dgvPresupuestos.CurrentRow.Cells["ColPresupuestoNro"].Value);
+
+                //LLAMADA AL CONSTRUCTOR DE DETALLES CON PARÁMETROS
+                FrmDetallesPresupuesto detalle = new FrmDetallesPresupuesto(nro);
+                detalle.presupuestoNro = nro;   
+                
+                detalle.ShowDialog();
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -75,6 +75,12 @@
     <Compile Include="Formularios\FrmConsultarPresupuestos.Designer.cs">
       <DependentUpon>FrmConsultarPresupuestos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmDetallesPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmDetallesPresupuesto.Designer.cs">
+      <DependentUpon>FrmDetallesPresupuesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmNuevoPresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,16 +93,36 @@
     <Compile Include="Formularios\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportes\DataSetCarpinteria.Designer.cs">
+    <Compile Include="Formularios\FrmReporteProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReporteProductos.Designer.cs">
+      <DependentUpon>FrmReporteProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReporteProductosPresupuestados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReporteProductosPresupuestados.Designer.cs">
+      <DependentUpon>FrmReporteProductosPresupuestados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\DSProductos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetCarpinteria.xsd</DependentUpon>
+      <DependentUpon>DSProductos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Reportes\DSProductosPresupuestados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSProductosPresupuestados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Formularios\FrmConsultarPresupuestos.resx">
       <DependentUpon>FrmConsultarPresupuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmDetallesPresupuesto.resx">
+      <DependentUpon>FrmDetallesPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmNuevoPresupuesto.resx">
       <DependentUpon>FrmNuevoPresupuesto.cs</DependentUpon>
@@ -104,6 +130,14 @@
     <EmbeddedResource Include="Formularios\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReporteProductos.resx">
+      <DependentUpon>FrmReporteProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReporteProductosPresupuestados.resx">
+      <DependentUpon>FrmReporteProductosPresupuestados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\RptProductos.rdlc" />
+    <EmbeddedResource Include="Formularios\Reportes\RptProductosPresupuestados.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -113,7 +147,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Reportes\ReporteCarpinteria.rdlc" />
+    <None Include="Formularios\Reportes\DSProductos.xsc">
+      <DependentUpon>DSProductos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\DSProductos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSProductos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Reportes\DSProductos.xss">
+      <DependentUpon>DSProductos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\DSProductosPresupuestados.xsc">
+      <DependentUpon>DSProductosPresupuestados.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Reportes\DSProductosPresupuestados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSProductosPresupuestados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Reportes\DSProductosPresupuestados.xss">
+      <DependentUpon>DSProductosPresupuestados.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -124,17 +179,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Reportes\DataSetCarpinteria.xsc">
-      <DependentUpon>DataSetCarpinteria.xsd</DependentUpon>
-    </None>
-    <None Include="Reportes\DataSetCarpinteria.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetCarpinteria.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Reportes\DataSetCarpinteria.xss">
-      <DependentUpon>DataSetCarpinteria.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -154,5 +198,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

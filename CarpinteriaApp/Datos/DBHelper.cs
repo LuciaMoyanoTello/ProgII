@@ -15,7 +15,7 @@ namespace CarpinteriaApp.Datos
         private SqlConnection conexion;
         public DBHelper()
         {
-            conexion = new SqlConnection(@"Data Source=DESKTOP-GE4ANJO\SQLEXPRESS;Initial Catalog=Carpinteria_2023;Integrated Security=True");
+            conexion = new SqlConnection(@"Data Source=DESKTOP-GE4ANJO\SQLEXPRESS;Initial Catalog=carpinteria_db;Integrated Security=True");
         }
 
         public int proximoPresupuesto()

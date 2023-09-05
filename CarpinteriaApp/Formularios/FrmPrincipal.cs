@@ -28,5 +28,20 @@ namespace CarpinteriaApp
             FrmConsultarPresupuestos frmConsultarPresupuestos = new FrmConsultarPresupuestos();
             frmConsultarPresupuestos.ShowDialog();
         }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new FrmReporteProductos().ShowDialog();
+        }
+
+        private void productosPresupuestadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmReporteProductosPresupuestados().ShowDialog();
+        }
     }
 }
