@@ -13,7 +13,7 @@ nombre varchar(100),
 titulo varchar(100)
 CONSTRAINT pk_carrera PRIMARY KEY(id_carrera))
 
-create table DetalleCarrera(
+CREATE TABLE DetalleCarrera(
 id_detalle int,
 id_carrera int,
 anioCursado int,
@@ -23,7 +23,8 @@ CONSTRAINT pk_detalle PRIMARY KEY(id_detalle),
 CONSTRAINT fk_carrera_detalle FOREIGN KEY(id_carrera)
 	REFERENCES carrera(id_carrera),
 CONSTRAINT fk_asignatura_detalle FOREIGN KEY(id_asignatura)
-	REFERENCES asignatura (id_asignatura))
+	REFERENCES asignatura (id_asignatura)
+)
 
 --INSERT
 INSERT INTO Asignatura(id_asignatura,nombre)
@@ -31,9 +32,9 @@ VALUES (1,'Laboratorio I')
 INSERT INTO Asignatura(id_asignatura,nombre)
 VALUES (2, 'Laboratorio II')
 INSERT INTO Asignatura(id_asignatura,nombre)
-VALUES (3, 'ProgramaciÃ³n I')
+VALUES (3, 'Programación I')
 INSERT INTO Asignatura(id_asignatura,nombre)
-VALUES (4, 'ProgramaciÃ³n II')
+VALUES (4, 'Programación II')
 
 --PROCEDIMIENTOS ALMACENADOS
 create procedure SP_PROXIMO_ID
@@ -52,21 +53,22 @@ end
 create procedure SP_INSERTAR_DETALLE
 @detalle int,
 @carrera int,
-@aÃ±o int,
+@año int,
 @cuatrimestre int,
 @asignatura int
 as
 begin
 	insert into DetalleCarrera(id_detalle,id_carrera,anioCursado,cuatrimestre,id_asignatura)
-	values (@detalle,@carrera,@aÃ±o,@cuatrimestre,@asignatura)
+	values (@detalle,@carrera,@año,@cuatrimestre,@asignatura)
 end
 
 create procedure SP_INSERTAR_MAESTRO
-@id_carrera int,
+@id_carrera int OUTPUT,
 @nombre varchar(100),
 @titulo varchar(100)
 as
 begin
 	insert into carrera (id_carrera,nombre,titulo)
-	values(@id_carrera,@nombre,@titulo)
+	values(@id_carrera,@nombre,@titulo);
+	SET @id_carrera = SCOPE_IDENTITY();
 end
