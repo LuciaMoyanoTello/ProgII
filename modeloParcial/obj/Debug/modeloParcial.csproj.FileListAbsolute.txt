@@ -1,0 +1,11 @@
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\modeloParcial\bin\Debug\modeloParcial.exe.config
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\modeloParcial\bin\Debug\modeloParcial.exe
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\modeloParcial\bin\Debug\modeloParcial.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\modeloParcial\obj\Debug\modeloParcial.csproj.AssemblyReference.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\modeloParcial\obj\Debug\modeloParcial.Form1.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\modeloParcial\obj\Debug\modeloParcial.Properties.Resources.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\modeloParcial\obj\Debug\modeloParcial.csproj.GenerateResource.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\modeloParcial\obj\Debug\modeloParcial.csproj.CoreCompileInputs.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\modeloParcial\obj\Debug\modeloParcial.exe
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\modeloParcial\obj\Debug\modeloParcial.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\modeloParcial\obj\Debug\modeloParcial.Presentacion.Principal.resources
