@@ -1,0 +1,11 @@
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\ConsultarCarpinteria\bin\Debug\ConsultarCarpinteria.exe.config
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\ConsultarCarpinteria\bin\Debug\ConsultarCarpinteria.exe
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\ConsultarCarpinteria\bin\Debug\ConsultarCarpinteria.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\ConsultarCarpinteria\obj\Debug\ConsultarCarpinteria.csproj.AssemblyReference.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\ConsultarCarpinteria\obj\Debug\ConsultarCarpinteria.FrmConsulta.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\ConsultarCarpinteria\obj\Debug\ConsultarCarpinteria.Formularios.FrmDetallePresupuesto.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\ConsultarCarpinteria\obj\Debug\ConsultarCarpinteria.Properties.Resources.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\ConsultarCarpinteria\obj\Debug\ConsultarCarpinteria.csproj.GenerateResource.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\ConsultarCarpinteria\obj\Debug\ConsultarCarpinteria.csproj.CoreCompileInputs.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\ConsultarCarpinteria\obj\Debug\ConsultarCarpinteria.exe
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\ConsultarCarpinteria\obj\Debug\ConsultarCarpinteria.pdb
