@@ -53,3 +53,17 @@ C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp1w1Capas\obj\Debu
 C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.csproj.CoreCompileInputs.cache
 C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.exe
 C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.pdb
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\bin\Debug\CarpinteriaApp.exe.config
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\bin\Debug\CarpinteriaApp.exe
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\bin\Debug\CarpinteriaApp.pdb
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.csproj.AssemblyReference.cache
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.Presentacion.FrmConsultarPresupuestos.resources
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.Presentacion.FrmDetallesPresupuesto.resources
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.Presentacion.FrmNuevoPresupuesto.resources
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.FrmPrincipal.resources
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.Properties.Resources.resources
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.csproj.GenerateResource.cache
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.exe
+C:\Users\alumno\Documents\lucia\ProgII\CarpinteriaApp1w1Capas\obj\Debug\CarpinteriaApp.pdb

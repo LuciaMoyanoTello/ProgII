@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarpinteriaApp", "CarpinteriaApp.csproj", "{1511C53B-0A7A-4DC5-BEC5-902AD4A08B34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarpinteriaBack", "..\CarpinteriaBack\CarpinteriaBack.csproj", "{E93B12B6-1307-4210-9202-1B84486F8F8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarpinteriaApi", "..\CarpinteriaApi\CarpinteriaApi.csproj", "{3D6C4D19-EB62-4419-9F87-BDD97C2889D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{1511C53B-0A7A-4DC5-BEC5-902AD4A08B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1511C53B-0A7A-4DC5-BEC5-902AD4A08B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1511C53B-0A7A-4DC5-BEC5-902AD4A08B34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E93B12B6-1307-4210-9202-1B84486F8F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E93B12B6-1307-4210-9202-1B84486F8F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E93B12B6-1307-4210-9202-1B84486F8F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E93B12B6-1307-4210-9202-1B84486F8F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D6C4D19-EB62-4419-9F87-BDD97C2889D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D6C4D19-EB62-4419-9F87-BDD97C2889D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D6C4D19-EB62-4419-9F87-BDD97C2889D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D6C4D19-EB62-4419-9F87-BDD97C2889D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
