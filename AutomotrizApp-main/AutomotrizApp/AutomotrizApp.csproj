@@ -49,6 +49,10 @@
     <Compile Include="Datos\DBHelper.cs" />
     <Compile Include="Datos\Parametro.cs" />
     <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\Detalles.cs" />
+    <Compile Include="Entidades\Presupuestos.cs" />
+    <Compile Include="Entidades\Productos.cs" />
+    <Compile Include="Entidades\Tipo.cs" />
     <Compile Include="Presentacion\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
