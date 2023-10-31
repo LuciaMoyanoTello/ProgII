@@ -12,6 +12,8 @@ using CarpinteriaFront.Servicios.Interfaz;
 using CarpinteriaFront.Servicios.Implementacion;
 using CarpinteriaFront.Servicios;
 using CarpinteriaBack.Entidades;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace CarpinteriaFront.Presentacion
 {
@@ -26,7 +28,7 @@ namespace CarpinteriaFront.Presentacion
             nuevo= new Presupuesto();
         }
 
-        private void FrmNuevoPresupuesto_Load(object sender, EventArgs e)
+        private async void FrmNuevoPresupuesto_Load(object sender, EventArgs e)
         {
             txtFecha.Text = DateTime.Today.ToShortDateString();
             txtCliente.Text = "Consumidor Final";
@@ -34,14 +36,17 @@ namespace CarpinteriaFront.Presentacion
             txtCantidad.Text = "1";
             lblPresupuestoNro.Text = lblPresupuestoNro.Text + " " + servicio.TraerProximoPresupuesto().ToString();
             
-            CargarProductos();
+            await CargarProductosAsync();
         }
-
-        private void CargarProductos()
+        //cargar productos con api
+        private async Task CargarProductosAsync()
         {
-            cboProducto.DataSource = servicio.TraerProductos();
+            string url = "https://localhost:7040/productos";
+            var dataJson = await ClienteSingleton.GetInstance().GetAsync(url);
+            List<Producto> lProductos = JsonConvert.DeserializeObject<List<Producto>>(dataJson);
+            cboProducto.DataSource = lProductos;
             cboProducto.ValueMember = "ProductoNro";
-            cboProducto.DisplayMember = "Nombre";  
+            cboProducto.DisplayMember = "Nombre";
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -123,12 +128,13 @@ namespace CarpinteriaFront.Presentacion
             GrabarPresupuesto();
         }
 
-        private void GrabarPresupuesto()
+        private async void GrabarPresupuesto()
         {
             nuevo.Fecha = Convert.ToDateTime(txtFecha.Text);
             nuevo.Cliente = txtCliente.Text;
             nuevo.Descuento=Convert.ToDouble(txtDescuento.Text);
-            if (servicio.CrearPresupuesto(nuevo))
+            //if (servicio.CrearPresupuesto(nuevo))
+            if(await CrearPresupuestoAsync(nuevo))
             {
                 MessageBox.Show("Se registró con éxito el presupuesto...", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 this.Dispose();
@@ -137,6 +143,14 @@ namespace CarpinteriaFront.Presentacion
             {
                 MessageBox.Show("NO se pudo registrar el presupuesto...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private async Task<bool> CrearPresupuestoAsync(Presupuesto nuevo)
+        {
+            string url = "https://localhost:7040/presupuesto";
+            string presupuestoJson = JsonConvert.SerializeObject(nuevo);
+            var dataJson = await ClienteSingleton.GetInstance().PostAsync(url,presupuestoJson);
+            return dataJson.Equals("true");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

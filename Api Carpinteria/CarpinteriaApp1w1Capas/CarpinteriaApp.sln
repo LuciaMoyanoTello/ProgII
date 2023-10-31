@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarpinteriaApp", "CarpinteriaApp.csproj", "{1511C53B-0A7A-4DC5-BEC5-902AD4A08B34}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarpinteriaBack", "..\CarpinteriaBack\CarpinteriaBack.csproj", "{E93B12B6-1307-4210-9202-1B84486F8F8A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarpinteriaApi", "..\CarpinteriaApi\CarpinteriaApi.csproj", "{3D6C4D19-EB62-4419-9F87-BDD97C2889D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarpinteriaFront", "..\CarpinteriaFront\CarpinteriaFront.csproj", "{81C5880B-3F43-4AB4-935E-23ABB8DCA0E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarpinteriaFront", "..\CarpinteriaFront\CarpinteriaFront.csproj", "{81C5880B-3F43-4AB4-935E-23ABB8DCA0E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1511C53B-0A7A-4DC5-BEC5-902AD4A08B34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1511C53B-0A7A-4DC5-BEC5-902AD4A08B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1511C53B-0A7A-4DC5-BEC5-902AD4A08B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1511C53B-0A7A-4DC5-BEC5-902AD4A08B34}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E93B12B6-1307-4210-9202-1B84486F8F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E93B12B6-1307-4210-9202-1B84486F8F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E93B12B6-1307-4210-9202-1B84486F8F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU

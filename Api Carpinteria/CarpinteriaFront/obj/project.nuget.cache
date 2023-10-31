@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s0PG9Apy3xi9D4zWOaAEm2wbjk+kbj5zno6EOSuU6WXhvl0LNX2HiSTD0wpirWx03JP3/3OPzq0kcYX6u5ONfw==",
+  "dgSpecHash": "eG1HYXuo3B0/6Rbmu+am871OR28JbrW8iui+BQ/cPZa/5c1K+ppQXMX8/9wp+RmRnK8RsTVFOnb4k7FU/mvISw==",
   "success": true,
   "projectFilePath": "C:\\Users\\alumno\\Documents\\lucia\\ProgII\\Api Carpinteria\\CarpinteriaFront\\CarpinteriaFront.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\alumno\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\alumno\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\alumno\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\alumno\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\alumno\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\alumno\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\alumno\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
