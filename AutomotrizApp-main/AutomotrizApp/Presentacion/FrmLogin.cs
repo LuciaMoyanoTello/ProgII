@@ -63,5 +63,10 @@ namespace AutomotrizApp.Presentacion
                 }
             }
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
