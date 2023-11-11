@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutomotrizApp.Entidades
 {
-    internal class Detalle
+    public class Detalle
     {
         //Atributos
         Producto productoDetalle;
@@ -27,6 +27,13 @@ namespace AutomotrizApp.Entidades
 
 
         //Metodos
+        public float CalcularSubTotal()
+        {
+            float subTotal;
 
+            subTotal = ProductoDetalle.Precio * Cantidad;
+
+            return subTotal;
+        }
     }
 }

@@ -43,9 +43,9 @@
             this.btnConsultarProductos = new System.Windows.Forms.Button();
             this.btnMenuProductos = new System.Windows.Forms.Button();
             this.pnUsuario = new System.Windows.Forms.Panel();
+            this.pbUserIcon = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pnMuestra = new System.Windows.Forms.Panel();
-            this.pbUserIcon = new System.Windows.Forms.PictureBox();
             this.pnMenuPrincipal.SuspendLayout();
             this.pnControles.SuspendLayout();
             this.pnMenuPresupuesto.SuspendLayout();
@@ -153,7 +153,7 @@
             this.btnNuevoPresupuesto.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnNuevoPresupuesto.Location = new System.Drawing.Point(0, 84);
             this.btnNuevoPresupuesto.Name = "btnNuevoPresupuesto";
-            this.btnNuevoPresupuesto.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnNuevoPresupuesto.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnNuevoPresupuesto.Size = new System.Drawing.Size(170, 42);
             this.btnNuevoPresupuesto.TabIndex = 5;
             this.btnNuevoPresupuesto.Text = "Nuevo Presupuesto";
@@ -171,7 +171,7 @@
             this.btnConsultarPresupuestos.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnConsultarPresupuestos.Location = new System.Drawing.Point(0, 42);
             this.btnConsultarPresupuestos.Name = "btnConsultarPresupuestos";
-            this.btnConsultarPresupuestos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnConsultarPresupuestos.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnConsultarPresupuestos.Size = new System.Drawing.Size(170, 42);
             this.btnConsultarPresupuestos.TabIndex = 2;
             this.btnConsultarPresupuestos.Text = "Consultar Presupuestos";
@@ -219,7 +219,7 @@
             this.btnNuevoProducto.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnNuevoProducto.Location = new System.Drawing.Point(0, 84);
             this.btnNuevoProducto.Name = "btnNuevoProducto";
-            this.btnNuevoProducto.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnNuevoProducto.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnNuevoProducto.Size = new System.Drawing.Size(170, 42);
             this.btnNuevoProducto.TabIndex = 0;
             this.btnNuevoProducto.Text = "Nuevo Producto";
@@ -237,7 +237,7 @@
             this.btnConsultarProductos.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnConsultarProductos.Location = new System.Drawing.Point(0, 42);
             this.btnConsultarProductos.Name = "btnConsultarProductos";
-            this.btnConsultarProductos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnConsultarProductos.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnConsultarProductos.Size = new System.Drawing.Size(170, 42);
             this.btnConsultarProductos.TabIndex = 2;
             this.btnConsultarProductos.Text = "Consultar Productos";
@@ -275,6 +275,15 @@
             this.pnUsuario.Size = new System.Drawing.Size(170, 155);
             this.pnUsuario.TabIndex = 1;
             // 
+            // pbUserIcon
+            // 
+            this.pbUserIcon.Image = global::AutomotrizApp.Properties.Resources.UserIcon;
+            this.pbUserIcon.Location = new System.Drawing.Point(36, 10);
+            this.pbUserIcon.Name = "pbUserIcon";
+            this.pbUserIcon.Size = new System.Drawing.Size(98, 98);
+            this.pbUserIcon.TabIndex = 1;
+            this.pbUserIcon.TabStop = false;
+            // 
             // lblUsuario
             // 
             this.lblUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -299,15 +308,6 @@
             this.pnMuestra.Name = "pnMuestra";
             this.pnMuestra.Size = new System.Drawing.Size(770, 520);
             this.pnMuestra.TabIndex = 1;
-            // 
-            // pbUserIcon
-            // 
-            this.pbUserIcon.Image = global::AutomotrizApp.Properties.Resources.UserIcon;
-            this.pbUserIcon.Location = new System.Drawing.Point(36, 10);
-            this.pbUserIcon.Name = "pbUserIcon";
-            this.pbUserIcon.Size = new System.Drawing.Size(98, 98);
-            this.pbUserIcon.TabIndex = 1;
-            this.pbUserIcon.TabStop = false;
             // 
             // FrmPrincipal
             // 

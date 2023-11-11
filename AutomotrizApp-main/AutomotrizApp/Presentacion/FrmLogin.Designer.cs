@@ -32,9 +32,10 @@
             this.btnIngresar = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblLoginError = new System.Windows.Forms.Label();
             this.cbPassword = new System.Windows.Forms.CheckBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,15 +79,6 @@
             this.txtUser.Enter += new System.EventHandler(this.TextBoxEvento);
             this.txtUser.Leave += new System.EventHandler(this.TextBoxEvento);
             // 
-            // pbLogo
-            // 
-            this.pbLogo.Image = global::AutomotrizApp.Properties.Resources.AutomotrizLogo;
-            this.pbLogo.Location = new System.Drawing.Point(84, 57);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(162, 112);
-            this.pbLogo.TabIndex = 3;
-            this.pbLogo.TabStop = false;
-            // 
             // lblLoginError
             // 
             this.lblLoginError.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -103,15 +95,45 @@
             // 
             // cbPassword
             // 
-            this.cbPassword.AutoSize = true;
+            this.cbPassword.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbPassword.AutoCheck = false;
             this.cbPassword.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cbPassword.FlatAppearance.BorderSize = 0;
+            this.cbPassword.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.cbPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.cbPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.cbPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPassword.Location = new System.Drawing.Point(251, 304);
+            this.cbPassword.Image = global::AutomotrizApp.Properties.Resources.PassHideIcon;
+            this.cbPassword.Location = new System.Drawing.Point(252, 298);
+            this.cbPassword.Margin = new System.Windows.Forms.Padding(0);
             this.cbPassword.Name = "cbPassword";
-            this.cbPassword.Size = new System.Drawing.Size(15, 14);
+            this.cbPassword.Size = new System.Drawing.Size(25, 25);
             this.cbPassword.TabIndex = 3;
+            this.cbPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cbPassword.UseVisualStyleBackColor = true;
-            this.cbPassword.CheckedChanged += new System.EventHandler(this.cbPassword_CheckedChanged);
+            this.cbPassword.Click += new System.EventHandler(this.cbPassword_Click);
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::AutomotrizApp.Properties.Resources.AutomotrizLogo;
+            this.pbLogo.Location = new System.Drawing.Point(84, 57);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(162, 112);
+            this.pbLogo.TabIndex = 3;
+            this.pbLogo.TabStop = false;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Image = global::AutomotrizApp.Properties.Resources.ExitIcon;
+            this.btnSalir.Location = new System.Drawing.Point(305, 5);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(20, 20);
+            this.btnSalir.TabIndex = 6;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmLogin
             // 
@@ -119,6 +141,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(330, 460);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.cbPassword);
             this.Controls.Add(this.lblLoginError);
             this.Controls.Add(this.pbLogo);
@@ -145,5 +168,6 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Label lblLoginError;
         private System.Windows.Forms.CheckBox cbPassword;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

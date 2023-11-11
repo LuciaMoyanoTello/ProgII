@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutomotrizApp.Datos
 {
-    internal class Parametro
+    public class Parametro
     {
         //Atributos
         string nombre;

@@ -66,7 +66,10 @@ namespace AutomotrizApp
         //Cierra el programa completo
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            // ---> Agregar confirmacion al salir 
+            //if (MessageBox.Show("¿Está seguro que desea salir?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //{
+            //    Application.Exit();
+            //}
             Application.Exit();
         }
 
@@ -102,7 +105,8 @@ namespace AutomotrizApp
             MessageBox.Show("Responsables: Grupo 12\n" +
                             "\n113857 De Maussion Gabriel" +
                             "\n114136 Moyano Tello Lucia Amancay" +
-                            "\n114256 Menta Agustina");
+                            "\n114256 Menta Agustina" + 
+                            "\n(Se que esta feo, luego lo mejoro)");
         }
 
 

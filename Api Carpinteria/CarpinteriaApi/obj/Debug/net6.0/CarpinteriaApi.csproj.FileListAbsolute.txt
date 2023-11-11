@@ -78,3 +78,43 @@ C:\Users\alumno\Documents\lucia\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\
 C:\Users\alumno\Documents\lucia\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\CarpinteriaApi.pdb
 C:\Users\alumno\Documents\lucia\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\CarpinteriaApi.genruntimeconfig.cache
 C:\Users\alumno\Documents\lucia\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\ref\CarpinteriaApi.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\appsettings.json
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\CarpinteriaApi.exe
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\CarpinteriaApi.deps.json
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\CarpinteriaApi.runtimeconfig.json
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\CarpinteriaApi.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\CarpinteriaApi.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\CarpinteriaBack.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\bin\Debug\net6.0\CarpinteriaBack.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\CarpinteriaApi.csproj.AssemblyReference.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\CarpinteriaApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\CarpinteriaApi.AssemblyInfoInputs.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\CarpinteriaApi.AssemblyInfo.cs
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\CarpinteriaApi.csproj.CoreCompileInputs.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\CarpinteriaApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\CarpinteriaApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\staticwebassets\msbuild.CarpinteriaApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\staticwebassets\msbuild.build.CarpinteriaApi.props
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CarpinteriaApi.props
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CarpinteriaApi.props
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\scopedcss\bundle\CarpinteriaApi.styles.css
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\CarpinteriaApi.csproj.CopyComplete
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\CarpinteriaApi.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\refint\CarpinteriaApi.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\CarpinteriaApi.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\CarpinteriaApi.genruntimeconfig.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaApi\obj\Debug\net6.0\ref\CarpinteriaApi.dll

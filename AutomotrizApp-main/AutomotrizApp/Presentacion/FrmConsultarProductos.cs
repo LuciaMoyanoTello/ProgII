@@ -1,4 +1,5 @@
 ﻿using AutomotrizApp.Datos;
+using AutomotrizApp.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -73,21 +74,41 @@ namespace AutomotrizApp.Presentacion
         private void btnReiniciarFiltros_Click(object sender, EventArgs e)
         {
             LimpiarControles();
+            btnFiltrar_Click(sender, e);
         }
 
         private void dgvConsultarProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Editar un producto
             if (dgvConsultarProductos.CurrentCell.OwningColumn.Name == "Editar")
             {
-                
+                //Crear producto con los datos de la fila
                 int idProducto = Convert.ToInt32(dgvConsultarProductos.CurrentRow.Cells["idProducto"].Value);
-                MessageBox.Show("ID: " + idProducto.ToString()); //Esto es solo para pruebas
-                FrmPrincipal.instancia.CambiarFormulario(new FrmNuevoProducto(idProducto));
+                string nombreProducto = Convert.ToString(dgvConsultarProductos.CurrentRow.Cells["nombreProducto"].Value);
+                float precioProducto = Convert.ToSingle(dgvConsultarProductos.CurrentRow.Cells["precioProducto"].Value);
+                string tipoProducto = Convert.ToString(dgvConsultarProductos.CurrentRow.Cells["tipoProducto"].Value);
+
+                Producto producto = new Producto(idProducto, nombreProducto, precioProducto, tipoProducto);
+
+                FrmPrincipal.instancia.CambiarFormulario(new FrmNuevoProducto(producto));
+            }
+
+            //Eliminar un producto
+            if (dgvConsultarProductos.CurrentCell.OwningColumn.Name == "Eliminar")
+            {
+                if(MessageBox.Show("¿Está seguro que desea eliminar:\n\"" + Convert.ToString(dgvConsultarProductos.CurrentRow.Cells["nombreProducto"].Value) + "\" del listado?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int idProducto = Convert.ToInt32(dgvConsultarProductos.CurrentRow.Cells["idProducto"].Value);
+                    List<Parametro> parametro = new List<Parametro>() { new Parametro("@input_id_producto", idProducto) };
+
+                    DBHelper.ObtenerInstancia().ConsultarSP("SP_ELIMINAR_PRODUCTOS", parametro); //Elimina de la base de datos
+                    dgvConsultarProductos.Rows.Remove(dgvConsultarProductos.CurrentRow); //Elimina del listado
+                }
             }
         }
 
 
-        //Veriica si la tecla presionada es un numero o un "control", si no lo es se ignora
+        //Veriica si la tecla presionada es un numero o un "backspace", si no lo es, se ignora
         private void txtNumerico_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))

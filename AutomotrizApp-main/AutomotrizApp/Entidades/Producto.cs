@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutomotrizApp.Entidades
 {
-    internal class Producto
+    public class Producto
     {
         //Atributos
         int id;

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvConsultarProductos = new System.Windows.Forms.DataGridView();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.lblNombreProducto = new System.Windows.Forms.Label();
@@ -45,6 +45,7 @@
             this.precioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,8 @@
             this.nombreProducto,
             this.precioProducto,
             this.tipoProducto,
-            this.Editar});
+            this.Editar,
+            this.Eliminar});
             this.dgvConsultarProductos.Location = new System.Drawing.Point(12, 162);
             this.dgvConsultarProductos.Name = "dgvConsultarProductos";
             this.dgvConsultarProductos.ReadOnly = true;
@@ -181,9 +183,9 @@
             // 
             // precioProducto
             // 
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.precioProducto.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.precioProducto.DefaultCellStyle = dataGridViewCellStyle1;
             this.precioProducto.HeaderText = "Precio";
             this.precioProducto.Name = "precioProducto";
             this.precioProducto.ReadOnly = true;
@@ -201,8 +203,15 @@
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
             this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Editar.Width = 65;
+            this.Editar.Width = 46;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Eliminar.HeaderText = "Accion";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Width = 46;
             // 
             // FrmConsultarProductos
             // 
@@ -249,5 +258,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precioProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoProducto;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
     }
 }

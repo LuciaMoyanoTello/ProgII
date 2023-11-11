@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutomotrizApp.Entidades
 {
-    internal class Presupuesto
+    public class Presupuesto
     {
         //Atributos
         int id;
@@ -34,11 +34,34 @@ namespace AutomotrizApp.Entidades
             this.Fecha = Fecha;
             this.Total = Total;
             this.FechaBaja = FechaBaja;
-            this.Detalles = Detalles;
+            if (Detalles == null) { this.Detalles = new List<Detalle>(); }
+            else { this.Detalles = Detalles;  }
         }
 
 
         //Metodos
+        public float CalcularTotal()
+        {
+            float total = 0;
 
+            foreach(Detalle detalle in Detalles)
+            {
+                total += detalle.CalcularSubTotal();
+            }
+
+            return total;
+        }
+
+
+        public void AgregarDetalle(Detalle detalle)
+        {
+            Detalles.Add(detalle);
+        }
+
+
+        public void EliminarDetalle(int indice)
+        {
+            Detalles.RemoveAt(indice);
+        }
     }
 }

@@ -25,3 +25,18 @@ C:\Users\gabyd\Desktop\Repositorio Programacion II\AutomotrizApp\AutomotrizApp\o
 C:\Users\gabyd\Desktop\Repositorio Programacion II\AutomotrizApp\AutomotrizApp\obj\Debug\AutomotrizApp.Presentacion.FrmNuevoProducto.resources
 C:\Users\gabyd\Desktop\Repositorio Programacion II\AutomotrizApp\AutomotrizApp\obj\Debug\AutomotrizApp.Presentacion.FrmConsultarPresupuestos.resources
 C:\Users\gabyd\Desktop\Repositorio Programacion II\AutomotrizApp\AutomotrizApp\obj\Debug\AutomotrizApp.Presentacion.FrmNuevoPresupuesto.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\bin\Debug\AutomotrizApp.exe.config
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\bin\Debug\AutomotrizApp.exe
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\bin\Debug\AutomotrizApp.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\obj\Debug\AutomotrizApp.csproj.AssemblyReference.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\obj\Debug\AutomotrizApp.Presentacion.FrmConsultarPresupuestos.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\obj\Debug\AutomotrizApp.Presentacion.FrmConsultarProductos.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\obj\Debug\AutomotrizApp.Presentacion.FrmLogin.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\obj\Debug\AutomotrizApp.Presentacion.FrmNuevoPresupuesto.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\obj\Debug\AutomotrizApp.Presentacion.FrmNuevoProducto.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\obj\Debug\AutomotrizApp.FrmPrincipal.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\obj\Debug\AutomotrizApp.Properties.Resources.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\obj\Debug\AutomotrizApp.csproj.GenerateResource.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\obj\Debug\AutomotrizApp.csproj.CoreCompileInputs.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\obj\Debug\AutomotrizApp.exe
+C:\Users\lucia\OneDrive\Documentos\2 año\TP\AutomotrizApp-main\AutomotrizApp\obj\Debug\AutomotrizApp.pdb

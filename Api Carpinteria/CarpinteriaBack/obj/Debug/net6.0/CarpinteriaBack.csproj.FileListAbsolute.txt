@@ -26,3 +26,17 @@ C:\Users\alumno\Documents\lucia\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug
 C:\Users\alumno\Documents\lucia\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\refint\CarpinteriaBack.dll
 C:\Users\alumno\Documents\lucia\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\CarpinteriaBack.pdb
 C:\Users\alumno\Documents\lucia\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\ref\CarpinteriaBack.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\bin\Debug\net6.0\CarpinteriaBack.deps.json
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\bin\Debug\net6.0\CarpinteriaBack.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\bin\Debug\net6.0\CarpinteriaBack.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\CarpinteriaBack.csproj.AssemblyReference.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\CarpinteriaBack.Properties.Resources.resources
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\CarpinteriaBack.csproj.GenerateResource.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\CarpinteriaBack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\CarpinteriaBack.AssemblyInfoInputs.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\CarpinteriaBack.AssemblyInfo.cs
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\CarpinteriaBack.csproj.CoreCompileInputs.cache
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\CarpinteriaBack.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\refint\CarpinteriaBack.dll
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\CarpinteriaBack.pdb
+C:\Users\lucia\OneDrive\Documentos\2 año\ProgII\Api Carpinteria\CarpinteriaBack\obj\Debug\net6.0\ref\CarpinteriaBack.dll

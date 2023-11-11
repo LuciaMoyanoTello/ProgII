@@ -1,4 +1,7 @@
 ﻿using AutomotrizApp.Datos;
+using AutomotrizApp.Datos.Interfaz;
+using AutomotrizApp.Servicios.Implementacion;
+using AutomotrizApp.Servicios.Interfaz;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,9 +17,11 @@ namespace AutomotrizApp.Presentacion
 {
     public partial class FrmConsultarPresupuestos : Form
     {
+        IServicio servicio = null;
         public FrmConsultarPresupuestos()
         {
             InitializeComponent();
+            servicio = new Servicio();
         }
 
 
@@ -78,6 +83,7 @@ namespace AutomotrizApp.Presentacion
         private void btnReiniciarFiltros_Click(object sender, EventArgs e)
         {
             LimpiarControles();
+            btnFiltrar_Click(sender, e);
         }
 
 
@@ -85,15 +91,19 @@ namespace AutomotrizApp.Presentacion
         {
             if (dgvConsultarPresupuestos.CurrentCell.OwningColumn.Name == "Eliminar")
             {
+                if (MessageBox.Show("¿Está seguro que desea eliminar el presupuesto de:\n\"" + Convert.ToString(dgvConsultarPresupuestos.CurrentRow.Cells["nombreCliente"].Value) + "\" por un total de $" + Convert.ToString(dgvConsultarPresupuestos.CurrentRow.Cells["totalPresupuesto"].Value) + " del listado?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int idPresupuesto = Convert.ToInt32(dgvConsultarPresupuestos.CurrentRow.Cells["idPresupuesto"].Value);
+                    List<Parametro> parametro = new List<Parametro>() { new Parametro("@input_id_presupuesto", idPresupuesto) };
 
-                int idPresupuesto = Convert.ToInt32(dgvConsultarPresupuestos.CurrentRow.Cells["idPresupuesto"].Value);
-                MessageBox.Show("Se deberia eliminar el Presupuesto con el ID: " + idPresupuesto.ToString()); //Esto es solo para pruebas
-                // ---> Eliminar un presupuesto del dgv y base de datos (hacer una confirmacion)
+                    DBHelper.ObtenerInstancia().ConsultarSP("[SP_ELIMINAR_PRESUPUESTOS]", parametro); //Elimina de la base de datos
+                    dgvConsultarPresupuestos.Rows.Remove(dgvConsultarPresupuestos.CurrentRow); //Elimina del listado
+                }
             }
         }
 
 
-        //Veriica si la tecla presionada es un numero o un "control", si no lo es se ignora
+        //Veriica si la tecla presionada es un numero o un "backspace", si no lo es, se ignora
         private void txtNumerico_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))

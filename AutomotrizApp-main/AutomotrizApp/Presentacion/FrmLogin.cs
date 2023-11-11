@@ -27,12 +27,26 @@ namespace AutomotrizApp.Presentacion
         private Cliente CrearCliente(DataTable tabla)
         {
             Cliente cliente = new Cliente(
-                                            tabla.Rows[0]["Nombre Completo"].ToString(),
-                                            tabla.Rows[0]["DNI"].ToString(),
-                                            tabla.Rows[0]["Telefono"].ToString()
+                                            NombreCompleto: Convert.ToString(tabla.Rows[0]["Nombre Completo"]),
+                                            Dni: Convert.ToString(tabla.Rows[0]["DNI"]),
+                                            Telefono: Convert.ToString(tabla.Rows[0]["Telefono"])
                                          );
 
             return cliente;
+        }
+
+
+        //El cambio del CheckBox se realiza de forma manual para validar cuando sea necesario que se presione
+        private void CambioCheck(CheckBox cb)
+        {
+            if(cb.Checked )
+            {
+                cb.Checked = false;
+            }
+            else
+            {
+                cb.Checked = true;
+            }
         }
         // ================================================================================================================================= //
 
@@ -100,19 +114,29 @@ namespace AutomotrizApp.Presentacion
 
 
         //Controla si debe mostrar o no los caracteres de la password
-        private void cbPassword_CheckedChanged(object sender, EventArgs e)
+        private void cbPassword_Click(object sender, EventArgs e)
         {
             if (txtPassword.Text != txtPassword.Tag.ToString())
             {
+                CambioCheck(cbPassword);
                 if (cbPassword.Checked)
                 {
                     txtPassword.UseSystemPasswordChar = false;
+                    cbPassword.Image = Properties.Resources.PassShowIcon;
                 }
                 else
                 {
                     txtPassword.UseSystemPasswordChar = true;
+                    cbPassword.Image = Properties.Resources.PassHideIcon;
                 }
             }
+        }
+
+
+        //Evento para cerrar el Login y cortar el programa
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         // ================================================================================================================================= //
