@@ -49,7 +49,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(683, 485);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
-            this.btnConfirmar.TabIndex = 19;
+            this.btnConfirmar.TabIndex = 3;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
@@ -93,14 +93,14 @@
             this.cboTipoProducto.Location = new System.Drawing.Point(98, 125);
             this.cboTipoProducto.Name = "cboTipoProducto";
             this.cboTipoProducto.Size = new System.Drawing.Size(237, 21);
-            this.cboTipoProducto.TabIndex = 15;
+            this.cboTipoProducto.TabIndex = 2;
             // 
             // txtPrecioProducto
             // 
             this.txtPrecioProducto.Location = new System.Drawing.Point(98, 90);
             this.txtPrecioProducto.Name = "txtPrecioProducto";
             this.txtPrecioProducto.Size = new System.Drawing.Size(237, 20);
-            this.txtPrecioProducto.TabIndex = 13;
+            this.txtPrecioProducto.TabIndex = 1;
             this.txtPrecioProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumerico_KeyPress);
             // 
             // lblNombreProducto
@@ -119,7 +119,7 @@
             this.txtNombreProducto.Location = new System.Drawing.Point(98, 55);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(237, 20);
-            this.txtNombreProducto.TabIndex = 11;
+            this.txtNombreProducto.TabIndex = 0;
             // 
             // dgvConsultarProductos
             // 
@@ -138,7 +138,7 @@
             this.dgvConsultarProductos.ReadOnly = true;
             this.dgvConsultarProductos.RowHeadersVisible = false;
             this.dgvConsultarProductos.Size = new System.Drawing.Size(746, 300);
-            this.dgvConsultarProductos.TabIndex = 10;
+            this.dgvConsultarProductos.TabIndex = 4;
             // 
             // idProducto
             // 

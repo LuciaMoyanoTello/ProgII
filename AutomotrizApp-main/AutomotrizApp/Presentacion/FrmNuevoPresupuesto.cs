@@ -20,7 +20,6 @@ namespace AutomotrizApp.Presentacion
         private Presupuesto nuevoPresupuesto;
         private Cliente clienteNuevoPresupuesto;
         IServicio servicio = null;
-
         public FrmNuevoPresupuesto()
         {
             InitializeComponent();
@@ -102,6 +101,14 @@ namespace AutomotrizApp.Presentacion
                 MessageBox.Show("Error\nIngrese la cantidad del producto...");
                 return false;
             }
+            foreach (DataGridViewRow row in dgvDetallesNuevoPresupuesto.Rows)
+            {
+                if (Convert.ToString(row.Cells["nombreProducto"].Value) == Convert.ToString(cboProducto.Text))
+                {
+                    MessageBox.Show("Error\nEl producto ya está en la lista...");
+                    return false;
+                }
+            }
             return true;
         }
 
@@ -125,7 +132,7 @@ namespace AutomotrizApp.Presentacion
             //    lProductos.Add(producto);
             //}
 
-            cboProducto.DataSource = servicio.TraerProductos(); 
+            cboProducto.DataSource = servicio.TraerProductos();
             cboProducto.DisplayMember = "Nombre";
             cboProducto.ValueMember = "Id";
 
@@ -155,12 +162,14 @@ namespace AutomotrizApp.Presentacion
         //Eventos
         // ================================================================================================================================= //
         //Load
-        private void FrmNuevoPresupuesto_Load(object sender, EventArgs e)
+        private void FrmNuevoPresupuesto_Load(object sender = null, EventArgs e = null)
         {
             LimpiarControles();
-            CargarComboProductos();
 
+            CargarComboProductos();
             txtDniCliente.Text = FrmPrincipal.clienteActivo.Dni; //Carga el DNI del cliente que inicio sesion
+
+            txtDniCliente.Focus();
         }
 
 
@@ -192,7 +201,7 @@ namespace AutomotrizApp.Presentacion
             if (ValidarConfirmar())
             {
                 nuevoPresupuesto.ClientePresupuesto = clienteNuevoPresupuesto;
-                if (servicio.TraerCrearPresupuesto(nuevoPresupuesto)) 
+                if (servicio.TraerCrearPresupuesto(nuevoPresupuesto))
                 {
                     MessageBox.Show("El Presupuesto se cargo con exito.");
                     LimpiarControles();

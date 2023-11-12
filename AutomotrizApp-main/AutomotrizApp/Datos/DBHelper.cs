@@ -10,7 +10,7 @@ using AutomotrizApp.Entidades;
 
 namespace AutomotrizApp.Datos
 {
-    public class DBHelper
+    internal class DBHelper
     {
         //Atributos
         // ================================================================================================================================= //
@@ -18,15 +18,30 @@ namespace AutomotrizApp.Datos
         private static DBHelper instancia;
         // ================================================================================================================================= //
 
+        SqlCommand cmd = new SqlCommand();
+        public SqlCommand Comando
+        {
+            get { return cmd; }
+            set { cmd = value; }
+        }
 
-
+        SqlDataReader reader;
+        public SqlDataReader Reader
+        {
+            get { return reader; }
+            set { reader = value; }
+        }
+        public void CerrarConexion()
+        {
+            conexion.Close();
+        }
         //Constructor e instancia
         // ================================================================================================================================= //
         private DBHelper(SqlConnection Conexion = null)
         {
             if (Conexion == null)
             {
-                conexion = new SqlConnection(@"Data Source=DESKTOP-GE4ANJO\SQLEXPRESS;Initial Catalog=AutomotrizApp;Integrated Security=True");
+                conexion = new SqlConnection(@"Data Source=GALER-PC\SQLEXPRESS;Initial Catalog=AutomotrizApp;Integrated Security=True");
             }
             else
             {
@@ -127,8 +142,17 @@ namespace AutomotrizApp.Datos
 
         }
 
+        //Método para leer sp
+        public SqlDataReader LeerDB(string procedure)
+        {
+            conexion.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = procedure;
+            SqlDataReader reader = cmd.ExecuteReader();
+            cmd.Parameters.Clear();
+            return reader;
+        }
 
-        // <--- Falta por hacer
 
         //Transaccion
         //public bool Transaccion(Presupuesto presupuesto)
@@ -145,7 +169,6 @@ namespace AutomotrizApp.Datos
         //        SqlCommand cmdPresupuesto = new SqlCommand("[SP_INSERTAR_PRESUPUESTOS]", conexion, t);
         //        cmdPresupuesto.CommandType = CommandType.StoredProcedure;
 
-
         //        //Carga de parametros de entrada
         //        cmdPresupuesto.Parameters.AddWithValue("@input_id_cliente", presupuesto.ClientePresupuesto.Id);
         //        cmdPresupuesto.Parameters.AddWithValue("@input_total", presupuesto.CalcularTotal());
@@ -156,7 +179,6 @@ namespace AutomotrizApp.Datos
         //        output.SqlDbType = SqlDbType.Int;
         //        output.Direction = ParameterDirection.Output;
         //        cmdPresupuesto.Parameters.Add(output);
-
 
         //        //Ejecuta alta del Presupuesto
         //        cmdPresupuesto.ExecuteNonQuery();
@@ -199,30 +221,7 @@ namespace AutomotrizApp.Datos
         //    return resultado;
         //}
 
-        //Obtener conexion
-        public SqlConnection ObtenerConexion()
-        {
-            return this.conexion;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        // ================================================================================================================================= //
 
 
     }

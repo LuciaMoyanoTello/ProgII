@@ -55,7 +55,7 @@
             this.btnConfirmar.Location = new System.Drawing.Point(683, 486);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
-            this.btnConfirmar.TabIndex = 28;
+            this.btnConfirmar.TabIndex = 5;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
@@ -109,7 +109,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(423, 126);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(237, 20);
-            this.txtCantidad.TabIndex = 21;
+            this.txtCantidad.TabIndex = 3;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumerico_KeyPress);
             // 
             // dgvDetallesNuevoPresupuesto
@@ -130,7 +130,7 @@
             this.dgvDetallesNuevoPresupuesto.ReadOnly = true;
             this.dgvDetallesNuevoPresupuesto.RowHeadersVisible = false;
             this.dgvDetallesNuevoPresupuesto.Size = new System.Drawing.Size(746, 300);
-            this.dgvDetallesNuevoPresupuesto.TabIndex = 20;
+            this.dgvDetallesNuevoPresupuesto.TabIndex = 6;
             this.dgvDetallesNuevoPresupuesto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetallesNuevoPresupuesto_CellContentClick);
             // 
             // nombreProducto
@@ -170,7 +170,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(683, 124);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 29;
+            this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -181,7 +181,7 @@
             this.cboProducto.Location = new System.Drawing.Point(98, 125);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(237, 21);
-            this.cboProducto.TabIndex = 31;
+            this.cboProducto.TabIndex = 2;
             // 
             // label1
             // 
@@ -200,7 +200,7 @@
             this.dtpFecha.Location = new System.Drawing.Point(98, 57);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(237, 20);
-            this.dtpFecha.TabIndex = 33;
+            this.dtpFecha.TabIndex = 0;
             this.dtpFecha.Value = new System.DateTime(2023, 11, 6, 0, 0, 0, 0);
             // 
             // txtDniCliente
@@ -208,7 +208,7 @@
             this.txtDniCliente.Location = new System.Drawing.Point(98, 91);
             this.txtDniCliente.Name = "txtDniCliente";
             this.txtDniCliente.Size = new System.Drawing.Size(237, 20);
-            this.txtDniCliente.TabIndex = 34;
+            this.txtDniCliente.TabIndex = 1;
             this.txtDniCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumerico_KeyPress);
             // 
             // lblTotalTexto

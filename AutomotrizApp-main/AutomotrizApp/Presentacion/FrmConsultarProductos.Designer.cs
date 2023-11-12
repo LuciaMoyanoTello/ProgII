@@ -30,6 +30,12 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvConsultarProductos = new System.Windows.Forms.DataGridView();
+            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.lblNombreProducto = new System.Windows.Forms.Label();
             this.txtPrecioProductoMin = new System.Windows.Forms.TextBox();
@@ -40,12 +46,6 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.btnReiniciarFiltros = new System.Windows.Forms.Button();
-            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +70,51 @@
             this.dgvConsultarProductos.Size = new System.Drawing.Size(746, 346);
             this.dgvConsultarProductos.TabIndex = 6;
             this.dgvConsultarProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarProductos_CellContentClick);
+            // 
+            // idProducto
+            // 
+            this.idProducto.HeaderText = "ID";
+            this.idProducto.Name = "idProducto";
+            this.idProducto.ReadOnly = true;
+            this.idProducto.Visible = false;
+            // 
+            // nombreProducto
+            // 
+            this.nombreProducto.HeaderText = "Nombre";
+            this.nombreProducto.Name = "nombreProducto";
+            this.nombreProducto.ReadOnly = true;
+            // 
+            // precioProducto
+            // 
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.precioProducto.DefaultCellStyle = dataGridViewCellStyle1;
+            this.precioProducto.HeaderText = "Precio";
+            this.precioProducto.Name = "precioProducto";
+            this.precioProducto.ReadOnly = true;
+            // 
+            // tipoProducto
+            // 
+            this.tipoProducto.HeaderText = "Tipo";
+            this.tipoProducto.Name = "tipoProducto";
+            this.tipoProducto.ReadOnly = true;
+            // 
+            // Editar
+            // 
+            this.Editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Editar.HeaderText = "Accion";
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.Width = 46;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Eliminar.HeaderText = "Accion";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Width = 46;
             // 
             // txtNombreProducto
             // 
@@ -167,51 +212,6 @@
             this.btnReiniciarFiltros.Text = "Reiniciar Filtros";
             this.btnReiniciarFiltros.UseVisualStyleBackColor = true;
             this.btnReiniciarFiltros.Click += new System.EventHandler(this.btnReiniciarFiltros_Click);
-            // 
-            // idProducto
-            // 
-            this.idProducto.HeaderText = "ID";
-            this.idProducto.Name = "idProducto";
-            this.idProducto.ReadOnly = true;
-            this.idProducto.Visible = false;
-            // 
-            // nombreProducto
-            // 
-            this.nombreProducto.HeaderText = "Nombre";
-            this.nombreProducto.Name = "nombreProducto";
-            this.nombreProducto.ReadOnly = true;
-            // 
-            // precioProducto
-            // 
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.precioProducto.DefaultCellStyle = dataGridViewCellStyle1;
-            this.precioProducto.HeaderText = "Precio";
-            this.precioProducto.Name = "precioProducto";
-            this.precioProducto.ReadOnly = true;
-            // 
-            // tipoProducto
-            // 
-            this.tipoProducto.HeaderText = "Tipo";
-            this.tipoProducto.Name = "tipoProducto";
-            this.tipoProducto.ReadOnly = true;
-            // 
-            // Editar
-            // 
-            this.Editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Editar.HeaderText = "Accion";
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Editar.Width = 46;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Eliminar.HeaderText = "Accion";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Width = 46;
             // 
             // FrmConsultarProductos
             // 

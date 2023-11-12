@@ -1,14 +1,10 @@
-﻿using AutomotrizApp.Datos;
-using AutomotrizApp.Datos.Implementacion;
-using AutomotrizApp.Datos.Interfaz;
-using AutomotrizApp.Entidades;
+﻿using AutomotrizApp.Entidades;
 using AutomotrizApp.Servicios.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace AutomotrizApp.Servicios.Implementacion
 {

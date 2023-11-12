@@ -1,6 +1,7 @@
 ﻿using AutomotrizApp.Datos;
 using AutomotrizApp.Entidades;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,7 +33,7 @@ namespace AutomotrizApp.Presentacion
         {
             txtNombreProducto.Text = "";
             txtPrecioProducto.Text = "0";
-            cboTipoProducto.Items.Clear();
+            cboTipoProducto.SelectedIndex = -1;
             dgvConsultarProductos.Rows.Clear();
         }
 
@@ -45,11 +46,14 @@ namespace AutomotrizApp.Presentacion
         //Eventos
         // ================================================================================================================================= //
         //Load
-        private void FrmNuevoProducto_Load(object sender, EventArgs e)
+        private void FrmNuevoProducto_Load(object sender = null, EventArgs e = null)
         {
             LimpiarControles();
+
             DBHelper.ObtenerInstancia().CargarCombo(cboTipoProducto, "SP_CONSULTAR_TIPOS");
             DBHelper.ObtenerInstancia().CargarGrilla(dgvConsultarProductos, null, "SP_CONSULTAR_PRODUCTOS");
+
+            txtNombreProducto.Focus();
 
             //Define si el formulario dira de ser usado para editar o crear un presupuesto
             if (producto != null)
@@ -62,9 +66,9 @@ namespace AutomotrizApp.Presentacion
             }
             else
             {
-                int proximaId = 99; // ---> Consultar proximo id para producto ([SP_PROXIMO_ID_PRODUCTO]) y asignarlo a idNuevoProducto
-                idNuevoProducto = proximaId;
-                lblTitulo.Text += " (N" + idNuevoProducto + ")";
+                DataTable tabla = DBHelper.ObtenerInstancia().ConsultarSP("[SP_PROXIMO_ID_PRODUCTOS]");
+                idNuevoProducto = Convert.ToInt32(tabla.Rows[0][0]);
+                lblTitulo.Text = "Nuevo Producto (N" + idNuevoProducto + ")";
             }
         }
 
@@ -94,27 +98,33 @@ namespace AutomotrizApp.Presentacion
         //Inicia insert o update con la base de datos, el camino se toma dependiendo si "producto" es null o no
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (ValidarConfirmar())
+            List<Parametro> lista = new List<Parametro>();
+
+            if (producto != null)
             {
-                string nombreSP;
-                List<Parametro> lista = new List<Parametro>();
+                lista.Add(new Parametro("@input_id_producto", Convert.ToString(producto.Id)));
+                if (txtNombreProducto.Text != "") { lista.Add(new Parametro("@input_nombre", txtNombreProducto.Text)); }
+                if (txtPrecioProducto.Text != "") { lista.Add(new Parametro("@input_precio", txtPrecioProducto.Text)); }
+                if (cboTipoProducto.SelectedIndex != -1) { lista.Add(new Parametro("@input_id_tipo", cboTipoProducto.SelectedValue)); }
 
-                if (producto != null)
-                {
-                    nombreSP = "SP_ACTUALIZAR_PRODUCTOS";
-                }
-                else
-                {
-                    nombreSP = "SP_INSERTAR_PRODUCTOS";
-                }
-                
-                lista.Add(new Parametro("@input_id_producto", Convert.ToString(idNuevoProducto)));
-                lista.Add(new Parametro("@input_nombre", txtNombreProducto.Text));
-                lista.Add(new Parametro("@input_precio", txtPrecioProducto.Text));
-                lista.Add(new Parametro("@input_id_tipo", cboTipoProducto.SelectedValue));
-
-                DBHelper.ObtenerInstancia().ConsultarSP(nombreSP, lista);
+                DBHelper.ObtenerInstancia().ConsultarSP("SP_ACTUALIZAR_PRODUCTOS", lista);
+                MessageBox.Show("El producto se actualizo correctamente");
+                FrmPrincipal.instancia.CambiarFormulario(FrmPrincipal.instancia.ConsultarProductos);
             }
+            else
+            {
+                if (ValidarConfirmar())
+                {
+                    lista.Add(new Parametro("@input_id_producto", Convert.ToString(idNuevoProducto)));
+                    lista.Add(new Parametro("@input_nombre", txtNombreProducto.Text));
+                    lista.Add(new Parametro("@input_precio", txtPrecioProducto.Text));
+                    lista.Add(new Parametro("@input_id_tipo", cboTipoProducto.SelectedValue));
+
+                    DBHelper.ObtenerInstancia().ConsultarSP("SP_INSERTAR_PRODUCTOS", lista);
+                    MessageBox.Show("El producto se creo correctamente");
+                }
+            }
+            FrmNuevoProducto_Load();
         }
 
 

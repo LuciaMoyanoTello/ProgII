@@ -37,16 +37,16 @@
             this.lblNombreProducto = new System.Windows.Forms.Label();
             this.txtDniCliente = new System.Windows.Forms.TextBox();
             this.dgvConsultarPresupuestos = new System.Windows.Forms.DataGridView();
-            this.txtTotalMax = new System.Windows.Forms.TextBox();
-            this.txtTotalMin = new System.Windows.Forms.TextBox();
-            this.dtpFechaMin = new System.Windows.Forms.DateTimePicker();
-            this.dtpFechaMax = new System.Windows.Forms.DateTimePicker();
             this.idPresupuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dniCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaPresupuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalPresupuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.txtTotalMax = new System.Windows.Forms.TextBox();
+            this.txtTotalMin = new System.Windows.Forms.TextBox();
+            this.dtpFechaMin = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaMax = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarPresupuestos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.btnReiniciarFiltros.Location = new System.Drawing.Point(561, 126);
             this.btnReiniciarFiltros.Name = "btnReiniciarFiltros";
             this.btnReiniciarFiltros.Size = new System.Drawing.Size(107, 23);
-            this.btnReiniciarFiltros.TabIndex = 15;
+            this.btnReiniciarFiltros.TabIndex = 6;
             this.btnReiniciarFiltros.Text = "Reiniciar Filtros";
             this.btnReiniciarFiltros.UseVisualStyleBackColor = true;
             this.btnReiniciarFiltros.Click += new System.EventHandler(this.btnReiniciarFiltros_Click);
@@ -65,7 +65,7 @@
             this.btnFiltrar.Location = new System.Drawing.Point(683, 126);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
-            this.btnFiltrar.TabIndex = 14;
+            this.btnFiltrar.TabIndex = 5;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
@@ -121,7 +121,7 @@
             this.txtDniCliente.Location = new System.Drawing.Point(98, 55);
             this.txtDniCliente.Name = "txtDniCliente";
             this.txtDniCliente.Size = new System.Drawing.Size(237, 20);
-            this.txtDniCliente.TabIndex = 9;
+            this.txtDniCliente.TabIndex = 0;
             // 
             // dgvConsultarPresupuestos
             // 
@@ -142,42 +142,8 @@
             this.dgvConsultarPresupuestos.ReadOnly = true;
             this.dgvConsultarPresupuestos.RowHeadersVisible = false;
             this.dgvConsultarPresupuestos.Size = new System.Drawing.Size(746, 346);
-            this.dgvConsultarPresupuestos.TabIndex = 17;
+            this.dgvConsultarPresupuestos.TabIndex = 7;
             this.dgvConsultarPresupuestos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarPresupuestos_CellContentClick);
-            // 
-            // txtTotalMax
-            // 
-            this.txtTotalMax.Location = new System.Drawing.Point(235, 125);
-            this.txtTotalMax.Name = "txtTotalMax";
-            this.txtTotalMax.Size = new System.Drawing.Size(100, 20);
-            this.txtTotalMax.TabIndex = 21;
-            this.txtTotalMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumerico_KeyPress);
-            // 
-            // txtTotalMin
-            // 
-            this.txtTotalMin.Location = new System.Drawing.Point(98, 125);
-            this.txtTotalMin.Name = "txtTotalMin";
-            this.txtTotalMin.Size = new System.Drawing.Size(100, 20);
-            this.txtTotalMin.TabIndex = 20;
-            this.txtTotalMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumerico_KeyPress);
-            // 
-            // dtpFechaMin
-            // 
-            this.dtpFechaMin.CustomFormat = "";
-            this.dtpFechaMin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaMin.Location = new System.Drawing.Point(98, 90);
-            this.dtpFechaMin.Name = "dtpFechaMin";
-            this.dtpFechaMin.Size = new System.Drawing.Size(100, 20);
-            this.dtpFechaMin.TabIndex = 22;
-            // 
-            // dtpFechaMax
-            // 
-            this.dtpFechaMax.CustomFormat = "";
-            this.dtpFechaMax.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaMax.Location = new System.Drawing.Point(235, 90);
-            this.dtpFechaMax.Name = "dtpFechaMax";
-            this.dtpFechaMax.Size = new System.Drawing.Size(100, 20);
-            this.dtpFechaMax.TabIndex = 23;
             // 
             // idPresupuesto
             // 
@@ -186,7 +152,6 @@
             this.idPresupuesto.Name = "idPresupuesto";
             this.idPresupuesto.ReadOnly = true;
             this.idPresupuesto.Visible = false;
-            this.idPresupuesto.Width = 24;
             // 
             // nombreCliente
             // 
@@ -224,6 +189,40 @@
             this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Eliminar.Width = 65;
+            // 
+            // txtTotalMax
+            // 
+            this.txtTotalMax.Location = new System.Drawing.Point(235, 125);
+            this.txtTotalMax.Name = "txtTotalMax";
+            this.txtTotalMax.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalMax.TabIndex = 4;
+            this.txtTotalMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumerico_KeyPress);
+            // 
+            // txtTotalMin
+            // 
+            this.txtTotalMin.Location = new System.Drawing.Point(98, 125);
+            this.txtTotalMin.Name = "txtTotalMin";
+            this.txtTotalMin.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalMin.TabIndex = 3;
+            this.txtTotalMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumerico_KeyPress);
+            // 
+            // dtpFechaMin
+            // 
+            this.dtpFechaMin.CustomFormat = "";
+            this.dtpFechaMin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaMin.Location = new System.Drawing.Point(98, 90);
+            this.dtpFechaMin.Name = "dtpFechaMin";
+            this.dtpFechaMin.Size = new System.Drawing.Size(100, 20);
+            this.dtpFechaMin.TabIndex = 1;
+            // 
+            // dtpFechaMax
+            // 
+            this.dtpFechaMax.CustomFormat = "";
+            this.dtpFechaMax.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaMax.Location = new System.Drawing.Point(235, 90);
+            this.dtpFechaMax.Name = "dtpFechaMax";
+            this.dtpFechaMax.Size = new System.Drawing.Size(100, 20);
+            this.dtpFechaMax.TabIndex = 2;
             // 
             // FrmConsultarPresupuestos
             // 

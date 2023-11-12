@@ -13,7 +13,7 @@ DROP TABLE TIPOS
 --Drop de SP
 DROP PROC [SP_CONSULTAR_LOGIN]
 DROP PROC [SP_CONSULTAR_CLIENTES]
-DROP PROC [SP_PROXIMO_ID_PRESUPUESTO]
+DROP PROC [SP_PROXIMO_ID_PRODUCTOS]
 DROP PROC [SP_CONSULTAR_TIPOS]
 DROP PROC [SP_CONSULTAR_PRODUCTOS]
 DROP PROC [SP_INSERTAR_PRODUCTOS]
@@ -248,14 +248,14 @@ go
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 go
---SP para conocer el id del proximo presupuesto
-create proc [SP_PROXIMO_ID_PRESUPUESTO]
-		@next int OUTPUT
+--SP para conocer el id del proximo producto a insertar
+create proc [SP_PROXIMO_ID_PRODUCTOS]
 as
 begin
-        SET @next = (SELECT MAX(p.id_presupuesto)+1  FROM PRESUPUESTOS p);
+        SELECT MAX(p.id_producto)+1 'Nueva ID'
+		FROM PRODUCTOS p;
 end
---exec [SP_PROXIMO_ID] @next = @output output
+--exec [SP_PROXIMO_ID_PRODUCTOS]
 go
 
 -----------------------------------------------------------------------------------------------------------------------------------------------

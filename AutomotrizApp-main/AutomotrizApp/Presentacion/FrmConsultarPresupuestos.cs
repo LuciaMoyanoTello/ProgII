@@ -1,7 +1,4 @@
 ﻿using AutomotrizApp.Datos;
-using AutomotrizApp.Datos.Interfaz;
-using AutomotrizApp.Servicios.Implementacion;
-using AutomotrizApp.Servicios.Interfaz;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,11 +14,9 @@ namespace AutomotrizApp.Presentacion
 {
     public partial class FrmConsultarPresupuestos : Form
     {
-        IServicio servicio = null;
         public FrmConsultarPresupuestos()
         {
             InitializeComponent();
-            servicio = new Servicio();
         }
 
 
@@ -45,11 +40,13 @@ namespace AutomotrizApp.Presentacion
         //Eventos
         // ================================================================================================================================= //
         //Load
-        private void FrmConsultarPresupuestos_Load(object sender, EventArgs e)
+        private void FrmConsultarPresupuestos_Load(object sender = null, EventArgs e = null)
         {
             LimpiarControles();
-            txtDniCliente.Focus();
+
             DBHelper.ObtenerInstancia().CargarGrilla(dgvConsultarPresupuestos, null, "SP_CONSULTAR_PRESUPUESTOS");
+
+            txtDniCliente.Focus();
         }
 
 

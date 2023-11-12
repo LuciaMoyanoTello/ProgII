@@ -55,7 +55,7 @@ namespace AutomotrizApp.Presentacion
         //Eventos
         // ================================================================================================================================= //
         //Load
-        private void FrmLogin_Load(object sender, EventArgs e)
+        private void FrmLogin_Load(object sender = null, EventArgs e = null)
         {
 
         }
