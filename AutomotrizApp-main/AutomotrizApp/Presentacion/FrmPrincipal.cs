@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using AutomotrizApp.Entidades;
 using AutomotrizApp.Datos;
 using System.Data.SqlClient;
+using AutomotrizApp.Presentacion.ReporteVenta;
 
 namespace AutomotrizApp
 {
@@ -89,7 +90,7 @@ namespace AutomotrizApp
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Falta crear Un reporte para mostrar\n(Agus tiene que hacerlo, pasarmelo y lo agrego)");
+            new FrmReporte().ShowDialog();
         }
 
         private void btnAcercaDe_Click(object sender, EventArgs e)

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AutomotrizApp.Datos.Implementacion
 {
-    public class Login : ILogIn
+    public class Login : ILogin
     {
         public bool Logeado(Cliente c)
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AutomotrizApp.Datos.Interfaz
 {
-    public interface ILogIn
+    public interface ILogin
     {
         bool Logeado(Cliente c);
     }

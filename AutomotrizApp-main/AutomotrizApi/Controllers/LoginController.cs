@@ -1,6 +1,6 @@
-﻿using AutomotrizApp.Datos.Implementacion;
-using AutomotrizApp.Datos.Interfaz;
-using AutomotrizApp.Entidades;
+﻿using AutomotrizApp.Entidades;
+using AutomotrizApp.Fachada.Implementacion;
+using AutomotrizApp.Fachada.Interfaz;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,21 +10,21 @@ namespace AutomotrizApi.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private ILogin back;
+        private IAplicacion app;
 
         public LoginController()
         {
-            back = new Login();
+            app = new Aplicacion();
         }
 
-        [HttpPost("GetLoged")]
-        public IActionResult GetLoged(Cliente c)
+        [HttpPost("GetLogin")]
+        public IActionResult GetLogin(Cliente c)
         {
             if (c is not null)
             {
                 try
                 {
-                    return Ok(back.Logeado(c));
+                    return Ok(app.Logeado(c));
 
                 }
                 catch (Exception)
@@ -34,8 +34,10 @@ namespace AutomotrizApi.Controllers
             }
             else
             {
-                return BadRequest("Debe ingresar nuevamente");
+                return BadRequest("Intente nuevamente");
+
             }
+
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using AutomotrizApp.Entidades;
+﻿using AutomotrizApp.Datos.Interfaz;
+using AutomotrizApp.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -6,13 +7,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AutomotrizApp.Datos.Interfaz;
 
 namespace AutomotrizApp.Datos.Implementacion
 {
     public class PresupuestoDao : IPresupuestoDao
     {
-        //FORM NUEVO PRESUPUESTO
         public bool CrearPresupuesto(Presupuesto presupuesto)
         {
             bool resultado = true;
@@ -84,8 +83,8 @@ namespace AutomotrizApp.Datos.Implementacion
 
         public List<Producto> ObtenerProductos()
         {
-            DataTable tProductos = DBHelper.ObtenerInstancia().ConsultarSP("SP_CONSULTAR_PRODUCTOS");
             List<Producto> lProductos = new List<Producto>();
+            DataTable tProductos = DBHelper.ObtenerInstancia().ConsultarSP("[SP_CONSULTAR_PRODUCTOS]");
 
             foreach (DataRow row in tProductos.Rows)
             {

@@ -1,7 +1,5 @@
 ﻿using AutomotrizApp.Datos;
 using AutomotrizApp.Entidades;
-using AutomotrizApp.Servicios.Implementacion;
-using AutomotrizApp.Servicios.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,11 +17,10 @@ namespace AutomotrizApp.Presentacion
     {
         private Presupuesto nuevoPresupuesto;
         private Cliente clienteNuevoPresupuesto;
-        IServicio servicio = null;
+
         public FrmNuevoPresupuesto()
         {
             InitializeComponent();
-            servicio = new Servicio();
         }
 
         //Metodos
@@ -116,23 +113,23 @@ namespace AutomotrizApp.Presentacion
         //Guarda una lista de productos dentro del combo box para el posterior uso de datos
         private void CargarComboProductos()
         {
-            //DataTable tProductos = DBHelper.ObtenerInstancia().ConsultarSP("SP_CONSULTAR_PRODUCTOS");
-            //List<Producto> lProductos = new List<Producto>();
+            DataTable tProductos = DBHelper.ObtenerInstancia().ConsultarSP("SP_CONSULTAR_PRODUCTOS");
+            List<Producto> lProductos = new List<Producto>();
 
-            //foreach (DataRow row in tProductos.Rows)
-            //{
-            //    Producto producto = new Producto
-            //    {
-            //        Id = Convert.ToInt32(row["Id"]),
-            //        Nombre = Convert.ToString(row["Nombre"]),
-            //        Precio = Convert.ToSingle(row["Precio"]),
-            //        Tipo = Convert.ToString(row["Tipo"])
-            //    };
+            foreach (DataRow row in tProductos.Rows)
+            {
+                Producto producto = new Producto
+                {
+                    Id = Convert.ToInt32(row["Id"]),
+                    Nombre = Convert.ToString(row["Nombre"]),
+                    Precio = Convert.ToSingle(row["Precio"]),
+                    Tipo = Convert.ToString(row["Tipo"])
+                };
 
-            //    lProductos.Add(producto);
-            //}
+                lProductos.Add(producto);
+            }
 
-            cboProducto.DataSource = servicio.TraerProductos();
+            cboProducto.DataSource = lProductos;
             cboProducto.DisplayMember = "Nombre";
             cboProducto.ValueMember = "Id";
 
@@ -201,7 +198,7 @@ namespace AutomotrizApp.Presentacion
             if (ValidarConfirmar())
             {
                 nuevoPresupuesto.ClientePresupuesto = clienteNuevoPresupuesto;
-                if (servicio.TraerCrearPresupuesto(nuevoPresupuesto))
+                if (DBHelper.ObtenerInstancia().Transaccion(nuevoPresupuesto))
                 {
                     MessageBox.Show("El Presupuesto se cargo con exito.");
                     LimpiarControles();

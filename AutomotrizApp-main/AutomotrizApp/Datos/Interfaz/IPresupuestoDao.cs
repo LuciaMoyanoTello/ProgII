@@ -9,8 +9,7 @@ namespace AutomotrizApp.Datos.Interfaz
 {
     public interface IPresupuestoDao
     {
-        //Nuevo presupuesto
-        List<Producto> ObtenerProductos();
         bool CrearPresupuesto(Presupuesto presupuesto);
+        List<Producto> ObtenerProductos();
     }
 }
